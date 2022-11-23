@@ -1053,14 +1053,23 @@ img {
     
 }
 
-.modal-label {
+.modal-field {
     display: flex;
     position: relative;
     flex-direction: column;
     
     margin-bottom: 10px;
     
-    font-style: normal;
+    /* font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    color: var(--title-text-color); */
+}
+
+.modal-label {
+     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.16;
@@ -1068,8 +1077,8 @@ img {
     color: var(--title-text-color);
 }
 
-.modal-label:last-child{
-    margin-bottom: 0;
+.modal-field:nth-of-type(4n){
+    margin-bottom: 20px;
 }
 
 .modal-input {
@@ -1090,9 +1099,11 @@ img {
 .modal-comment {
     margin-top: 4px;
     font-weight: 400;
-    
+    min-width: 448px;
+    min-height: 120px;
+    resize: none;
     padding: 12px 16px;
-    margin-bottom: 20px;
+   
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
@@ -1104,10 +1115,54 @@ img {
     color: rgba(117, 117, 117, 0.5);
 }
 
-.modal-checkbox {
 
+.modal-checkbox{
+    display: flex;
+    align-items: center;
+    padding-left: 11px;
 }
 
+.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.checkbox-icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-text-color);
+    border-radius: 2px;
+
+    
+}
+
+.accepted-text,
+.checkbox-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+} 
+  
+.accepted-text {
+    color: var(--title-text-color);
+}
+
+.checkbox-link{
+    color: var(--accent-color);
+} 
 
 .button-checkbox {
     position: absolute;
@@ -1136,6 +1191,10 @@ img {
     background-color: var(--active-bg-color);
 }
 
+/* .modal-form>.button-checkbox {
+    margin: 0 auto;
+}
+   */
 /* цвет основного текста #212121 */
 /* вторичный цвет текста #757575 */
 /* белый #FFFFFF  */
